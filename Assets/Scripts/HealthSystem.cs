@@ -5,9 +5,10 @@ using UnityEngine;
 public class HealthSystem : MonoBehaviour
 {
     public string objectName;
-    public int health;
-    public int maxHealth = 100;
+    public float health;
+    public float maxHealth = 100;
 
+    public bool ifEnemy = false;
     private void Start()
     {
         health = maxHealth;
@@ -24,5 +25,10 @@ public class HealthSystem : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+
+        if(ifEnemy == true)
+        {
+            RailTank.Instance.MoveToNewPosition();
+        }
     }
 }

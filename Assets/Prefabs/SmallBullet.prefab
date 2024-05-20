@@ -117,6 +117,7 @@ GameObject:
   m_Component:
   - component: {fileID: 615031328499351571}
   - component: {fileID: 3067953674574231824}
+  - component: {fileID: -5385662475348321739}
   m_Layer: 0
   m_Name: SmallBullet
   m_TagString: Untagged
@@ -152,6 +153,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c27ebc213765744f8da1f7666af8130, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isEnemy: 0
   moveSpeed: 50
   explosionVFX: {fileID: 9079504692670759629, guid: 9cb47d488c3f81643814e05429726795,
     type: 3}
+--- !u!135 &-5385662475348321739
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5683049051830564399}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.5
+  m_Center: {x: 0, y: 0, z: 0}

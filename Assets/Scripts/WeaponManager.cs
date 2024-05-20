@@ -111,7 +111,7 @@ public class WeaponManager : MonoBehaviour
 
             else
             {
-
+                Debug.Log("resetted current healthSystem");
                 currentHealthSystem = null;
             }
 
@@ -124,6 +124,7 @@ public class WeaponManager : MonoBehaviour
             Vector3 shootTargetVector = shootTarget.position;
             bulletPrefabScript.Setup(shootTargetVector);
             Debug.Log("Not shooting raycast");
+            currentHealthSystem = null;
         }
 
         StartCoroutine(ResetCanShoot(currentWeapon.fireIntervalTime));
@@ -131,12 +132,19 @@ public class WeaponManager : MonoBehaviour
 
     public void UpdateUiEnemyStatusValues()
     {
-
-        enemyUIStatusScript.UpdateValues(currentHealthSystem);
+        if(currentHealthSystem != null)
+        {
+            enemyUIStatusScript.UpdateValues(currentHealthSystem);
+        }
+        
     }
     public void DealDamage()
     {
-        currentHealthSystem.TakeDamage(CalculateDamage(currentWeapon.damageMin, currentWeapon.damageMax));
+        if(currentHealthSystem != null)
+        {
+            currentHealthSystem.TakeDamage(CalculateDamage(currentWeapon.damageMin, currentWeapon.damageMax));
+        }
+        
     }
 
     private IEnumerator ResetCanShoot(float intervalTime)
@@ -203,7 +211,7 @@ public class WeaponManager : MonoBehaviour
         return weaponOnIndex;
     }
 
-    private int CalculateDamage(int minimumDmg, int maxDmg)
+    public int CalculateDamage(int minimumDmg, int maxDmg)
     {
         int totalDamage = Random.Range(minimumDmg, maxDmg);
         return totalDamage;

@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.70710677, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 615031328499351571}
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1f6673917ad844142b85bba10731eec1, type: 2}
+  - {fileID: 2100000, guid: 409a906f54f18ae48bfca840ac5826bd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -117,9 +117,9 @@ GameObject:
   m_Component:
   - component: {fileID: 615031328499351571}
   - component: {fileID: 3067953674574231824}
-  - component: {fileID: 4001861998418676020}
+  - component: {fileID: -1578069514652292563}
   m_Layer: 0
-  m_Name: MediumBulletPrefab
+  m_Name: RailWeaponBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135,7 +135,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1524753651225835952}
@@ -155,9 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isEnemy: 0
   moveSpeed: 50
-  explosionVFX: {fileID: 9079504692670759629, guid: 9cb47d488c3f81643814e05429726795,
+  explosionVFX: {fileID: 9079504692670759629, guid: 8a4f5493fe194bb4b8e65a065045d115,
     type: 3}
---- !u!135 &4001861998418676020
+--- !u!135 &-1578069514652292563
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,5 +176,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.5
+  m_Radius: 3
   m_Center: {x: 0, y: 0, z: 0}

@@ -42,7 +42,8 @@ public class EnemyUIStatus : MonoBehaviour
     public void UpdateValues(HealthSystem healthySystem)
     {
         enemyName.text = healthySystem.objectName;
-        enemyHealthStatus.text = ("Enemy Armour at " + Mathf.RoundToInt(healthySystem.health / healthySystem.maxHealth * 100) + "% ");
+        enemyHealthStatus.text = ("Enemy Armour at " + Mathf.RoundToInt(healthySystem.health / healthySystem.maxHealth * 100f)  + "% ");
+        //enemyHealthStatus.text = ("Enemy Armour at " + healthySystem.health + "/" + healthySystem.maxHealth + "% ");
         enemyHealthSlider.value = Mathf.RoundToInt(healthySystem.health / healthySystem.maxHealth * 100);
         
     }

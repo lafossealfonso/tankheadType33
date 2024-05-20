@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1a05b472c275b448bce3f6b143eb90b, type: 3}
-  m_Name: High Range
+  m_Name: RailTankWeapon
   m_EditorClassIdentifier: 
   weaponName: TYPE 5FA IEYASU
-  range: 200
-  ammunition: 4
+  range: 150
+  ammunition: 3
   maxAmmunition: 5
   reloadTime: 5
   fireIntervalTime: 1.5
-  damageMin: 70
-  damageMax: 100
+  damageMin: 30
+  damageMax: 70
   reloadAlert: 0
-  bulletPrefab: {fileID: 615031328499351571, guid: 889fb5006a62f1f4da2e21224e71caa7,
+  bulletPrefab: {fileID: 615031328499351571, guid: c322283614deb4e4e910ec5ac162581e,
     type: 3}
